@@ -259,5 +259,186 @@ def foo() end # => :foo   # 2.1
 
 > Faster Numbers for Serious Math using GNU MPA lib
 
-
 # Rails
+###Why Ruby on Rails?
+> DRY principal
+
+> Convention over Configuration
+
+> Gems and Plugins
+
+> Scaffolding
+
+> Pure OOP Concept
+
+###What is MVC? How does it work?
+> MVC tends for Model-View-Controlles. MVC flow goes like this: request forst comes to the controller, controller finds an appropriate view, your view interacts with model, model interacts with database. Basically if you URL is something like
+
+> http://localhost:3000/users/new
+
+> user is your controller, new is your method, there must be a file in your view/users folder named new.html.erb, so, once the submit button is pressed, User model or whatwever defined in the rhtml form_for syntax, will be called and values will be stored into the database
+
+###What is Ruby Gems?
+> Ruby Gem is a software package called a “gem”. Gem contains packaged Ruby application or native application wrapped with Ruby interface. Ruby Gems software itself allows user ot easly dowload, install and manipulate gems on your system
+
+###What is Bundler?
+> Bundelr helps to you manage your gems for the applciation. After specifying gems in a certain configuratin file , you need to execute a bundle install command. It will use already installed gems aor download new ones from repository. Default repository is rubygems.org.
+
+###What is Gemfile and Gemfile.lock?
+> The Gemfile is where you specify which gems and versions you want to use. The Gemfile.lock is where Bundler records the exact versions that were installed. This way, when the same application is loaded on another machinem running bundle install will look at the Gemfile.lock and isntall the exact same versions to achieve the same application environment. The user should not ever have to directly edit thee lock file.
+
+###What is ORM in Rails? What is ActiveRecord?
+> ORM tends for Object-Relationship-Model, it basically means that your classes are mapped to table in the database and objects are directly mapped to the rows int the table.
+
+> Activerecord is a smart ORM implementations bunlded with Ruby on Rails. Main features:
+
+> Sssotiations among objects
+
+> Automated mapping between tables and classes
+
+> Data validations
+
+> Callbacks
+
+> Inheritance hierarchies
+
+> Database abstraction through adapters
+
+> Migration supprot
+
+###What things we can define in the model?
+> Validations (validate_presence_of, numeracility_of)
+
+> Relationships(like has_one, has_many, HABTM etc.)
+
+> Callbacks(like before_save, after_save, before_create etc.)
+
+> Suppose you installed a plugin say validation_group, So you can also define validation_group settings in your model
+
+> Raw Queries in Sql
+
+###What are the engines in MySQL?
+> MyISAM (>15% RW rate, simpler, faster, full text indexing, max 232 rows, max 64 indexes per row)
+
+> InnoDB (FK constraints, transactions, row-level locking, higher concurrency, durability, cascading deletes)
+
+> What are the servers supported by Ruby on Rails?
+
+> Webrick, Mongrel, Thin, Puma, Rainbows, Unicorn, Passenger
+
+> What kind of Types of Relationships in a Model class do you know? How they can be defined?
+
+> has_one, has_many, belongs_to, has_and_belongs_to_many, has_many :through
+
+###What is asset pipeline?
+Asset pipeline is a paratigm and a set of techniques enable proper organization of CSS and JavaScript
+
+###What is “request.xhr?” How does it works? What this code does?
+```ruby
+def name
+ if (request.xhr?)
+   render :text => @name.to_s
+ else
+   render :action => 'view_attribute', :attr => @name
+ end
+end
+```
+> request.xhr? tells controller is a request was sent using AJAX or it’s a regular HTTP request. Browser add the header “X-Requested-With: XMLHttpRequest” to AJAX request
+
+###What is Scaffolding?
+
+###What are the template engines are supported by Rails?
+> ERB, HAML, Slim, Stylus, Less, Sass
+
+###What is the differenct in -%> and %> constructions of ERB?
+> The extra dash makes ERB not output the newline after the closing tag.
+
+###What is the difference between “form_for” and “form_tag”?
+> Both are used to build a form. Form_for tag is for specific model, it builds form from model fields. Form_tag creates a regular form, it is best used for non-model-fields
+
+###What are the helpers? How to use helpers in ROR?
+> Helpers (“view helpers”) are modules that provide methods which are automatically usable in your view. They provide shortcuts to commonly used display code
+
+###What’s the difference between the Rails v2 and v3?
+> Brand new router with an emphasis on RESTful declarations
+
+> New Action Mailer API modeled after Action Controller
+
+> New Active Record chainable query language built on top of relational algebra
+
+> Unobtrusive JavaScript helpers with drivers for Prototype, jQuery, and more coming (end of inline JS)
+
+> Explicit dependency management with Bundler
+
+###What’s new in Rails 4?
+> Rails queue
+
+> Asynchronious Action Mailer
+
+> HTTP PATCH method
+
+> Custom Flash types (:error, :warning)
+
+> Live Streaming (long polling)
+
+> Routing improved
+
+> Strong parameters to avoid insecure mass-assignement
+
+> Turbolinks
+
+> Page and Action cahing removed
+
+> Asset pipeline improved (extracted to plugin, precompilation, performance
+
+> Model.where.not, Model.where.like calls
+
+> Before_filter renamed to before_action
+
+> Chainable relation.none
+
+> Ruby 1.9.3 required
+
+> Plugins support removed
+
+###What is TDD and BDD? Difference between them
+> TDD is Test-Driven-Development, BDD is Behaviour-Driven-development
+
+###What are the most common test frameforks supported by Rails
+> TestUnit, RSpec, Cucumber
+
+###How to list all routes for an Rails application?
+> By writing “rake routes” in terminal
+
+###What is Rake task, Rakefile?
+> Rake is a command line utility of Rails. Rake is Ruby Make, it uses Rakefile to build up a list of tasks. Rake is used for common administration tasks.
+
+###Tell my about projects you had been involved.
+> Ha-ha, no answers here!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
