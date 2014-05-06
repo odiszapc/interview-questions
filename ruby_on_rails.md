@@ -422,7 +422,7 @@ end
 
 ####Ok, now you have environment consisting of several interchangeable servers. How will user work with them?
 
-#But it may happen user logs in on a specific Rails instance but next request will be sent to another one where user has not been logged in!
+####But it may happen user logs in on a specific Rails instance but next request will be sent to another one where user has not been logged in!
 
 ####What happen with session when this particular server goes down?
 
